@@ -1,0 +1,98 @@
+--- malaga-7.12/Makefile.in.orig	2008-02-28 19:38:21.000000000 +0100
++++ malaga-7.12/Makefile.in	2010-11-24 08:43:28.795098261 +0100
+@@ -76,8 +76,7 @@
+ .SUFFIXES: .o .c
+ 
+ .c.o:
+-	@echo "Compiling $<"
+-	@$(COMPILE) $(GLIB_CFLAGS) $(READLINE_CFLAGS) $<
++	$(COMPILE) $(GLIB_CFLAGS) $(READLINE_CFLAGS) $<
+ 
+ # Primary goals. --------------------------------------------------------------
+ 
+@@ -178,12 +177,10 @@
+ LIBMALAGA_OBJS = $(COMMON_OBJS) libmalaga.o
+ 
+ $(LIBMALAGA_OBJS):
+-	@echo "Compiling $<"
+-	@$(LIBTOOL) --mode=compile $(COMPILE) $(GLIB_CFLAGS) $(srcdir)/$*.c
++	$(LIBTOOL) --mode=compile $(COMPILE) $(GLIB_CFLAGS) $(srcdir)/$*.c
+ 
+ libmalaga.la: $(LIBMALAGA_OBJS)
+-	@echo "Linking libmalaga"
+-	@$(LIBTOOL) --mode=link $(LINK) $(LIBMALAGA_OBJS:.o=.lo) $(GLIB_LIBS) \
++	$(LIBTOOL) --mode=link $(LINK) $(LIBMALAGA_OBJS:.o=.lo) $(GLIB_LIBS) \
+           -lm -o libmalaga.la -version-info $(LIBMALAGA_VERSION) \
+ 	  -rpath @libdir@
+ 
+@@ -193,15 +190,13 @@
+               malaga.o
+ 
+ malaga: $(MALAGA_OBJS) libmalaga.la
+-	@echo "Linking malaga"
+-	@$(LIBTOOL) --mode=link $(LINK) $(MALAGA_OBJS) $(GLIB_LIBS) \
++	$(LIBTOOL) --mode=link $(LINK) $(MALAGA_OBJS) $(GLIB_LIBS) \
+ 	  $(READLINE_LIBS) -lm libmalaga.la -o malaga
+ 
+ # maldump ---------------------------------------------------------------------
+ 
+ maldump: maldump.o libmalaga.la
+-	@echo "Linking maldump"
+-	@$(LIBTOOL) --mode=link $(LINK) maldump.o $(GLIB_LIBS) -lm \
++	$(LIBTOOL) --mode=link $(LINK) maldump.o $(GLIB_LIBS) -lm \
+ 	  libmalaga.la -o maldump
+ 
+ # mallex ----------------------------------------------------------------------
+@@ -210,15 +205,13 @@
+               mallex.o
+ 
+ mallex: $(MALLEX_OBJS) libmalaga.la
+-	@echo "Linking mallex"
+-	@$(LIBTOOL) --mode=link $(LINK) $(MALLEX_OBJS) $(GLIB_LIBS) \
++	$(LIBTOOL) --mode=link $(LINK) $(MALLEX_OBJS) $(GLIB_LIBS) \
+ 	  $(READLINE_LIBS) -lm libmalaga.la -o mallex
+ 
+ # malmake ---------------------------------------------------------------------
+ 
+ malmake: malmake.o libmalaga.la
+-	@echo "Linking malmake"
+-	@$(LIBTOOL) --mode=link $(LINK) malmake.o $(GLIB_LIBS) libmalaga.la \
++	$(LIBTOOL) --mode=link $(LINK) malmake.o $(GLIB_LIBS) libmalaga.la \
+ 	  -o malmake
+ 
+ # malrul ----------------------------------------------------------------------
+@@ -227,8 +220,7 @@
+               rule_symbols.o
+ 
+ malrul: $(MALRUL_OBJS) libmalaga.la
+-	@echo "Linking malrul"
+-	@$(LIBTOOL) --mode=link $(LINK) $(MALRUL_OBJS) $(GLIB_LIBS) \
++	$(LIBTOOL) --mode=link $(LINK) $(MALRUL_OBJS) $(GLIB_LIBS) \
+ 	  libmalaga.la -o malrul	
+ 
+ # malshow ---------------------------------------------------------------------
+@@ -237,12 +229,10 @@
+                variables.o
+ 
+ $(MALSHOW_OBJS):
+-	@echo "Compiling $<"
+-	@$(COMPILE) $(GTK_CFLAGS) $(srcdir)/$*.c
++	$(COMPILE) $(GTK_CFLAGS) $(srcdir)/$*.c
+ 
+ malshow: $(MALSHOW_OBJS) libmalaga.la
+-	@echo "Linking malshow"
+-	@$(LIBTOOL) --mode=link $(LINK) $(MALSHOW_OBJS) $(GTK_LIBS) \
++	$(LIBTOOL) --mode=link $(LINK) $(MALSHOW_OBJS) $(GTK_LIBS) \
+ 	  libmalaga.la -o malshow 
+ 
+ # malsym ----------------------------------------------------------------------
+@@ -250,8 +240,7 @@
+ MALSYM_OBJS = malsym.o sym_compiler.o
+ 
+ malsym: $(MALSYM_OBJS) libmalaga.la
+-	@echo "Linking malsym"
+-	@$(LIBTOOL) --mode=link $(LINK) $(MALSYM_OBJS) $(GLIB_LIBS) \
++	$(LIBTOOL) --mode=link $(LINK) $(MALSYM_OBJS) $(GLIB_LIBS) \
+ 	  libmalaga.la -o malsym
+ 
+ #==============================================================================

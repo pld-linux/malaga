@@ -1,0 +1,24 @@
+--- malaga-7.12/malaga.texi.orig	2008-02-28 19:48:18.000000000 +0100
++++ malaga-7.12/malaga.texi	2010-11-24 08:42:03.735104128 +0100
+@@ -34,14 +34,14 @@
+ 
+ @c Copyright (C) 1995 Bjoern Beutel.
+ 
+-@dircategory Malaga - a Natural Language Analysis System
++@dircategory Miscellaneous:
+ @direntry
+-* Malaga: (malaga). A Grammar Development Environment for Natural Languages.
+-* malaga: (malaga)malaga. Analyse words/sentences using a Malaga grammar.
+-* mallex: (malaga)mallex. Run allomorph rules on lexicon entries.
+-* malmake: (malaga)malmake. Compile all files of a Malaga grammar.
+-* malrul: (malaga)malrul. Compile a rule file of a Malaga grammar.
+-* malsym: (malaga)malsym. Compile a symbol file of a Malaga grammar.
++* Malaga: (malaga).			A Grammar Development Environment for Natural Languages
++* malaga: (malaga)malaga.		Analyse words/sentences using a Malaga grammar
++* mallex: (malaga)mallex.		Run allomorph rules on lexicon entries
++* malmake: (malaga)malmake.		Compile all files of a Malaga grammar
++* malrul: (malaga)malrul.		Compile a rule file of a Malaga grammar
++* malsym: (malaga)malsym.		Compile a symbol file of a Malaga grammar
+ @end direntry
+ 
+ @c ----------------------------------------------------------------------------
