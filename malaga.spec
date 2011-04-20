@@ -2,7 +2,7 @@ Summary:	Malaga - a Natural Language Analysis System
 Summary(pl.UTF-8):	Malaga - system analizy języków naturalnych
 Name:		malaga
 Version:	7.12
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://home.arcor.de/bjoern-beutel/malaga/%{name}-%{version}.tgz
@@ -91,7 +91,8 @@ Graficzny interfejs wyświetlający wyniki i stany diagnostyczne Malagi.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	INSTALL_INFO=true
 
 %clean
 rm -rf $RPM_BUILD_ROOT
