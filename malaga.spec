@@ -2,13 +2,14 @@ Summary:	Malaga - a Natural Language Analysis System
 Summary(pl.UTF-8):	Malaga - system analizy języków naturalnych
 Name:		malaga
 Version:	7.12
-Release:	3
+Release:	4
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://home.arcor.de/bjoern-beutel/malaga/%{name}-%{version}.tgz
 # Source0-md5:	873b292d923e2d1c0643769aa58c1882
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-verbose.patch
+Patch2:		link.patch
 URL:		http://home.arcor.de/bjoern-beutel/malaga/
 BuildRequires:	glib2-devel >= 2.0
 BuildRequires:	gtk+2-devel >= 2:2.8
@@ -82,6 +83,7 @@ Graficzny interfejs wyświetlający wyniki i stany diagnostyczne Malagi.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %configure
@@ -112,7 +114,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/mallex
 %attr(755,root,root) %{_bindir}/malmake
 %attr(755,root,root) %{_bindir}/malrul
-%attr(755,root,root) %{_bindir}/malshow
 %attr(755,root,root) %{_bindir}/malsym
 %attr(755,root,root) %{_libdir}/libmalaga.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libmalaga.so.7

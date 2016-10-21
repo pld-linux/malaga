@@ -1,0 +1,20 @@
+--- malaga-7.12/Makefile.in.orig	2016-10-21 07:18:31.171572529 +0200
++++ malaga-7.12/Makefile.in	2016-10-21 07:19:40.339120302 +0200
+@@ -233,7 +233,7 @@
+ 
+ malshow: $(MALSHOW_OBJS) libmalaga.la
+ 	$(LIBTOOL) --mode=link $(LINK) $(MALSHOW_OBJS) $(GTK_LIBS) \
+-	  libmalaga.la -o malshow 
++	 -lm libmalaga.la -o malshow 
+ 
+ # malsym ----------------------------------------------------------------------
+ 
+@@ -241,7 +241,7 @@
+ 
+ malsym: $(MALSYM_OBJS) libmalaga.la
+ 	$(LIBTOOL) --mode=link $(LINK) $(MALSYM_OBJS) $(GLIB_LIBS) \
+-	  libmalaga.la -o malsym
++	 -lm libmalaga.la -o malsym
+ 
+ #==============================================================================
+ # The dependencies are created by "gcc -MM *.c `pkg-config gtk+-2.0 --cflags`.

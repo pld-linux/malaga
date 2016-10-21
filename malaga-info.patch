@@ -22,3 +22,46 @@
  @end direntry
  
  @c ----------------------------------------------------------------------------
+@@ -49,8 +49,7 @@
+ @titlepage
+ @title Malaga 7.12
+ @subtitle User's and Programmer's Manual
+-@author 
+-Bj@"orn Beutel
++@author Bj@"orn Beutel
+ @page
+ @vskip 0pt plus 1 filll
+ Copyright @copyright{} 1995 Bj@"orn Beutel.
+@@ -86,7 +85,7 @@
+ development and application of grammars that are used for the analysis
+ of words and sentences of natural languages.
+ 
+-Copyright @copyright{} 1995 Bj@ouml{}rn Beutel.
++Copyright @copyright{} 1995 Bj@"orn Beutel.
+ 
+ Permission is granted to make and distribute verbatim copies of this
+ manual provided the copyright notice and this permission notice are
+@@ -142,10 +141,10 @@
+ @b{A}pplication''.
+ 
+ @ifnottex
+-The program package ``Malaga'' has been developed by Bj@ouml{}rn Beutel.
+-@cindex Beutel, Bj@ouml{}rn
+-Gerald Sch@uuml{}ller
+-@cindex Sch@uuml{}ller, Gerald
++The program package ``Malaga'' has been developed by Bj@"orn Beutel.
++@cindex Beutel, Bj@"orn
++Gerald Sch@"uller
++@cindex Sch@"uller, Gerald
+ @end ifnottex
+ @iftex
+ The program package ``Malaga'' has been developed by Bj@"orn Beutel.
+@@ -1663,7 +1662,7 @@
+ @code{ga-line} (in @code{mallex}), you can display the results with
+ @code{result}.
+ 
+-@itemize @asis
++@itemize
+ @item @code{use-display} is off:
+ The results will be sent to standard output.
+ 
