@@ -2,7 +2,7 @@ Summary:	Malaga - a Natural Language Analysis System
 Summary(pl.UTF-8):	Malaga - system analizy języków naturalnych
 Name:		malaga
 Version:	7.12
-Release:	5
+Release:	6
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://home.arcor.de/bjoern-beutel/malaga/%{name}-%{version}.tgz
