@@ -5,12 +5,15 @@ Version:	7.12
 Release:	6
 License:	GPL v2+
 Group:		Libraries
-Source0:	http://home.arcor.de/bjoern-beutel/malaga/%{name}-%{version}.tgz
+#Source0:	http://home.arcor.de/bjoern-beutel/malaga/%{name}-%{version}.tgz
+Source0:	http://dynalabs.de/mxp/assets/%{name}-%{version}.tgz
 # Source0-md5:	873b292d923e2d1c0643769aa58c1882
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-verbose.patch
 Patch2:		link.patch
-URL:		http://home.arcor.de/bjoern-beutel/malaga/
+# defunct
+#URL:		http://home.arcor.de/bjoern-beutel/malaga/
+URL:		http://dynalabs.de/mxp/malaga
 BuildRequires:	glib2-devel >= 2.0
 BuildRequires:	gtk+2-devel >= 2:2.8
 BuildRequires:	pkgconfig
@@ -26,8 +29,8 @@ programming language for the modelling of the language-dependent
 grammatical information. This language is also called Malaga.
 
 Malaga is based on the grammatical theory of the "Left Associative
-Grammar" (LAG), developed by Roland Hausser, professor for Computational
-Linguistics at University of Erlangen, Germany.
+Grammar" (LAG), developed by Roland Hausser, professor for
+Computational Linguistics at University of Erlangen, Germany.
 
 %description -l pl.UTF-8
 Malaga to pakiet do programowania i stosowania gramatyk używawnych
